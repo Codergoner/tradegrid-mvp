@@ -1,0 +1,26 @@
+{
+  "name": "tradegrid",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,cyan \"node server/index.js\" \"vite\"",
+    "server": "node server/index.js",
+    "build": "vite build --config vite.config.js && vite build --config vite.worker.config.js",
+    "preview": "vite preview",
+    "test": "node --test server/*.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "pdfkit": "^0.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.5"
+  }
+}
